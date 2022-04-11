@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
+
 app.use(cors())
+app.use(express.static(__dirname + '/public'));
 
 const PORT = 8000;
 
@@ -188,10 +190,11 @@ function getPokemonAtSlot(req){
     return pokemon;
 }
 
+
+
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-    // res.send(
-    //     '<h1>My Favorite Pokemon Teams!</h1><p>api: /api/teambuilder</p><p>grab a specific team: /api/teambuilder/{id}</p><p>grab a specific pokemon from that team: /api/teambuilder/{id}/{slot}</p>');
+    
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.get('/api/teamBuilder', (req, res) => {
