@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<title>Pokemon Team Builder</title>
+
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<h1>My Favorite Pokemon Teams!</h1>
+		<p>To access API: /api/teambuilder</p>
+		<p>To grab a specific team: /api/teambuilder/{id}</p>
+		<p>To grab a specific pokemon from that team: /api/teambuilder/{id}/{slot}</p>
+		
+		<section class="container">
+			<div class="app">
+				<div class="paperTitle">Create Your Team</div>
+				<form action="">
+					<!-- Header -->
+					<div class="team">
+						<label for="teamName" id="lblTeamName">Team Name:</label>
+						<input type="text" name="teamName" id="teamName">
+					</div>
+					<div class="fav">
+						<input type="checkbox" name="favorite" id="cbxFav">
+						<label for="cbxFav">Favorite?</label>
+					</div>	
+
+					<!-- Slot Selection -->
+					<div class="teamWrapper">
+						<!-- Slot 1 -->
+						<input type="radio" name="pokemonSlot" id="slot1" class="hidebx" value="slot1">
+						<label for="slot1" class="lblSlot">
+							<div class="displayBox">
+								<img src="#" alt="" class="pkmnIcon">
+								<div class="level">Lv. 0</div>
+								<div class="name">Pikachu1</div>
+							</div>
+						</label>
+
+						<!-- Slot 2 -->
+						<input type="radio" name="pokemonSlot" id="slot2" class="hidebx" value="slot2">
+						<label for="slot2" class="lblSlot">
+							<div class="displayBox">
+								<img src="#" alt="" class="pkmnIcon">
+								<div class="level">Lv. 0</div>
+								<div class="name">Pikachu2</div>
+							</div>
+						</label>
+
+						<!-- Slot 3 -->
+						<input type="radio" name="pokemonSlot" id="slot3" class="hidebx" value="slot3">
+						<label for="slot3" class="lblSlot">
+							<div class="displayBox">
+								<img src="#" alt="" class="pkmnIcon">
+								<div class="level">Lv. 0</div>
+								<div class="name">Pikachu3</div>
+							</div>
+						</label>
+
+						<!-- Slot 4 -->
+						<input type="radio" name="pokemonSlot" id="slot4" class="hidebx" value="slot4">
+						<label for="slot4" class="lblSlot">
+							<div class="displayBox">
+								<img src="#" alt="" class="pkmnIcon">
+								<div class="level">Lv. 0</div>
+								<div class="name">Pikachu4</div>
+							</div>
+						</label>
+
+						<!-- Slot 5 -->
+						<input type="radio" name="pokemonSlot" id="slot5" class="hidebx" value="slot5">
+						<label for="slot5" class="lblSlot">
+							<div class="displayBox">
+								<img src="#" alt="" class="pkmnIcon">
+								<div class="level">Lv. 0</div>
+								<div class="name">Pikachu5</div>
+							</div>
+						</label>
+
+						<!-- Slot 6 -->
+						<input type="radio" name="pokemonSlot" id="slot6" class="hidebx" value="slot6">
+						<label for="slot6" class="lblSlot">
+							<div class="displayBox">
+								<img src="#" alt="" class="pkmnIcon">
+								<div class="level">Lv. 0</div>
+								<div class="name">Pikachu6</div>
+							</div>
+						</label>
+					</div>
+
+					<!-- Submit Button -->
+					<button type="submit" class="saveTeam">Save</button>
+				</form>
+			</div>
+		</section>
+		
+		
+		
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

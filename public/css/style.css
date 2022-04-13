@@ -1,0 +1,126 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body{
+
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: steelblue;
+    display: grid;
+    place-items: center;
+}
+
+.app{
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 12px -6px rgba(0,0,0,0.4);
+    padding: 20px;
+    position: relative;
+}
+
+.app:before{
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 5%;
+    width: 90%;
+    height: 30px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.paperTitle{
+    margin-bottom: 20px;
+    font-size: 26px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.fav{
+    padding: 10px 0;
+}
+
+.hidebx{
+    display: none;
+}
+
+.app .teamWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.lblSlot{
+    text-align: center;
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.35);
+    padding: 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.displayBox .level{
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+}
+
+.displayBox .name{
+    font-weight: 600;
+}
+
+input[type=radio]:checked + .lblSlot{
+    border-color: steelblue;
+}
+
+.saveTeam{
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(162, 255, 193);
+    box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.35);
+    border: 0px solid black;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
