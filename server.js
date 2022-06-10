@@ -34,6 +34,66 @@ let pokemonTeams = [
             move2: 'Fake Tears',
             move3: '',
             move4: ''
+        },
+        {
+            slot: 3,
+            name: 'Joltik',
+            nickname: 'Henry',
+            ability: '',
+            heldItem: 'Eviolite',
+            level: 11,
+            move1: 'Tackle',
+            move2: 'Thunderwave',
+            move3: '',
+            move4: ''
+        },
+        {
+            slot: 3,
+            name: 'Minccino',
+            nickname: 'Walter',
+            ability: '',
+            heldItem: 'Eviolite',
+            level: 14,
+            move1: 'Tackle',
+            move2: 'Double Slap',
+            move3: 'Tail Whip',
+            move4: ''
+        },
+        {
+            slot: 4,
+            name: 'Cubone',
+            nickname: 'Marcus',
+            ability: '',
+            heldItem: 'Eviolite',
+            level: 11,
+            move1: 'Bonemerang',
+            move2: 'Bone Club',
+            move3: 'Headbutt',
+            move4: ''
+        },
+        {
+            slot: 5,
+            name: 'Pichu',
+            nickname: 'Linus',
+            ability: '',
+            heldItem: 'Eviolite',
+            level: 11,
+            move1: 'Tackle',
+            move2: 'Shockwave',
+            move3: 'Iron Tail',
+            move4: ''
+        },
+        {
+            slot: 6,
+            name: 'Inkay',
+            nickname: 'Harold',
+            ability: 'Thick Skin',
+            heldItem: 'Eviolite',
+            level: 9,
+            move1: 'Surf',
+            move2: 'Waterfall',
+            move3: 'Brine',
+            move4: 'Hidden Power'
         }]
     },
     // team 2
@@ -51,6 +111,18 @@ let pokemonTeams = [
             move1: 'Supersonic',
             move2: 'Dragon Claw',
             move3: 'Extreme Speed',
+            move4: ''
+        },
+        {
+            slot: 2,
+            name: 'Bisharp',
+            nickname: 'AkimboSlice',
+            ability: '',
+            heldItem: 'Metal Plate',
+            level: 90,
+            move1: 'Dark Pulse',
+            move2: 'Metal Claw',
+            move3: 'Swords Dance',
             move4: ''
         }]
     }
@@ -70,7 +142,7 @@ function getPokemonAtSlot(req){
 
 app.get('/', (req, res) => {
     res.send(
-        '<h1>Build Your Dream Pokemon Team Here!</h1><p>api: /api/teambuilder</p><p>grab a specific team: /api/teambuilder/{id}</p><p>grab a specific pokemon: /api/teambuilder/{id}/{slot}</p>');
+        '<h1>My Favorite Pokemon Teams!</h1><p>api: /api/teambuilder</p><p>grab a specific team: /api/teambuilder/{id}</p><p>grab a specific pokemon from that team: /api/teambuilder/{id}/{slot}</p>');
 });
 
 // app.get('/api', (req, res) => {
