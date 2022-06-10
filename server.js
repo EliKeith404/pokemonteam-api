@@ -124,6 +124,54 @@ let pokemonTeams = [
             move2: 'Metal Claw',
             move3: 'Swords Dance',
             move4: ''
+        },
+        {
+            slot: 3,
+            name: 'Breloom',
+            nickname: 'Jerome',
+            ability: '',
+            heldItem: 'Eviolite',
+            level: 53,
+            move1: 'Bullet Punch',
+            move2: 'Grass Knot',
+            move3: 'Spore',
+            move4: ''
+        },
+        {
+            slot: 4,
+            name: 'Gengar',
+            nickname: 'Gary',
+            ability: 'Thick Skin',
+            heldItem: 'Eviolite',
+            level: 26,
+            move1: 'Shadow Ball',
+            move2: 'Dark Pulse',
+            move3: 'Shadow Sneak',
+            move4: 'Hidden Power'
+        },
+        {
+            slot: 5,
+            name: 'Nidoking',
+            nickname: 'Bradley',
+            ability: 'Thick Skin',
+            heldItem: 'Eviolite',
+            level: 87,
+            move1: 'Drain Punch',
+            move2: 'Earthquake',
+            move3: 'Poison Jab',
+            move4: 'Rock Slide'
+        },
+        {
+            slot: 6,
+            name: 'Mimikyu',
+            nickname: 'Wayne',
+            ability: 'Disguise',
+            heldItem: 'Eviolite',
+            level: 66,
+            move1: 'Shadow Sneak',
+            move2: 'Pursuit',
+            move3: '',
+            move4: ''
         }]
     }
 ];
@@ -159,7 +207,7 @@ app.get('/api/teamBuilder/:id', (req, res) => {
     team ? res.json(team) : res.status(404).end();
 });
 
-app.get('api/teamBuilder/:id/:slot', (req, res)=>{
+app.get('/api/teamBuilder/:id/:slot', (req, res)=>{
     const pokemon = getPokemonAtSlot(req);
 
     pokemon ? res.json(pokemon) : res.status(404).end();
