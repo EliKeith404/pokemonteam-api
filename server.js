@@ -72,17 +72,17 @@ app.get('/', (req, res) => {
     res.send('<h1>Build Your Dream Pokemon Team Here!</h1>');
 });
 
-app.get('/teamBuilder', (req, res) => {
+app.get('api/teamBuilder', (req, res) => {
     res.json(pokemonTeams);
 });
 
-app.get('/teamBuilder/:id', (req, res) => {
+app.get('api/teamBuilder/:id', (req, res) => {
     const team = getPokemonTeam(req);
 
     team ? res.json(team) : res.status(404).end();
 });
 
-app.get('/teamBuilder/:id/:slot', (req, res)=>{
+app.get('api/teamBuilder/:id/:slot', (req, res)=>{
     const pokemon = getPokemonAtSlot(req);
 
     pokemon ? res.json(pokemon) : res.status(404).end();
