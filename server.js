@@ -86,6 +86,6 @@ app.get('/teamBuilder/:id/:slot', (req, res)=>{
     pokemon ? res.json(pokemon) : res.status(404).end();
 })
 
-app.listen(PORT, () => {
+app.listen(prosses.env.PORT || PORT, () => {
     console.log(`Server is running on port ${PORT}! WOOOO`);
 });
