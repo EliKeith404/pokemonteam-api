@@ -189,13 +189,10 @@ function getPokemonAtSlot(req){
 }
 
 app.get('/', (req, res) => {
-    res.send(
-        '<h1>My Favorite Pokemon Teams!</h1><p>api: /api/teambuilder</p><p>grab a specific team: /api/teambuilder/{id}</p><p>grab a specific pokemon from that team: /api/teambuilder/{id}/{slot}</p>');
+    res.sendFile(__dirname + '/index.html');
+    // res.send(
+    //     '<h1>My Favorite Pokemon Teams!</h1><p>api: /api/teambuilder</p><p>grab a specific team: /api/teambuilder/{id}</p><p>grab a specific pokemon from that team: /api/teambuilder/{id}/{slot}</p>');
 });
-
-// app.get('/api', (req, res) => {
-//     res.send('<p>grab a specific team: /api/teambuilder/{id}</p><p>grab a specific pokemon: /api/teambuilder/{id}/{slot}</p>');
-// });
 
 app.get('/api/teamBuilder', (req, res) => {
     res.json(pokemonTeams);
